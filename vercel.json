@@ -25,5 +25,8 @@
 			"src": "/(.*)",
 			"dest": "src/vercel_app/wsgi.py"
 		}
-	]
+	],
+	"env": {
+		"ENV": "production"
+	}
 }
