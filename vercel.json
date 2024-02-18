@@ -1,7 +1,7 @@
 {
 	"builds": [
 		{
-			"src": "vercel_app/wsgi.py",
+			"src": "src/vercel_app/wsgi.py",
 			"use": "@vercel/python",
 			"config": {
 				"maxLambdaSize": "15mb",
@@ -9,7 +9,7 @@
 			}
 		},
 		{
-			"src": "build.sh",
+			"src": "src/build.sh",
 			"use": "@vercel/static-build",
 			"config": {
 				"distDir": "src/staticfiles"
@@ -23,7 +23,7 @@
 		},
 		{
 			"src": "/(.*)",
-			"dest": "vercel_app/wsgi.py"
+			"dest": "src/vercel_app/wsgi.py"
 		}
 	]
 }
