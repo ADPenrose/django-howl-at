@@ -16,6 +16,9 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "vercel_app.settings")
 # If we are on prouction, we need to tell vercel to import files from
 # the parent directory of this file, and not the base directory.
 if os.environ.get("ENV") == "production":
+    print("Production environment detected")
     sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+else:
+    print("Development environment detected")
 
 app = get_wsgi_application()
