@@ -1,9 +1,15 @@
 {
 	"scripts": {
-		"tailwind-watch": "tailwindcss -i ./public/css/tailwind-input.css -o ./static/css/tailwind-output.css --watch",
-		"tailwind-build": "tailwindcss -i ./public/css/tailwind-input.css -o ./static/css/tailwind-output.css --minify"
+		"tailwind-watch": "tailwindcss -i ./public/css/tailwind-input.css -o ./src/static/css/tailwind-output.css --watch",
+		"tailwind-build": "tailwindcss -i ./public/css/tailwind-input.css -o ./src/static/css/tailwind-output.css --minify",
+		"js-watch": "esbuild ./public/js/script.js --bundle --minify --sourcemap --outfile=./src/static/js/script.js --watch",
+		"js-build": "esbuild ./public/js/script.js --bundle --minify --sourcemap --outfile=./src/static/js/script.js"
 	},
 	"devDependencies": {
+		"esbuild": "0.20.0",
 		"tailwindcss": "^3.4.1"
+	},
+	"dependencies": {
+		"alpinejs": "^3.13.5"
 	}
 }
